@@ -1,13 +1,11 @@
 # MSTRMND
 
-Dual-stack project — **not just Next.js**:
+Dual-stack monorepo for the MSTRMND app.
 
 | Stack | Path | What it is |
 |--------|------|------------|
-| **Expo (React Native)** | `mobile/` | The real product UI (onboarding, tabs, transfer/request) |
-| **Next.js** | repo root | v0 web shell placeholder only |
-
-You can run the Expo app in **Expo Go**, as **Expo Web**, or on a simulator. An Expo Snack is possible in theory, but this project’s NativeWind + local assets + Expo Router setup is a poor fit for Snack — use Expo Go / web instead.
+| **Expo (React Native)** | `mobile/` | The product UI (onboarding, tabs, transfer/request) |
+| **Next.js** | `web/` | The web shell |
 
 ## Previews
 
@@ -48,11 +46,12 @@ cd mobile
 npx expo start --web
 ```
 
-## Run Next.js (web placeholder)
+## Run Next.js (web)
 
 ```bash
-pnpm install
-pnpm dev
+cd web
+npm install
+npm run dev
 ```
 
 Open `http://localhost:3000`.

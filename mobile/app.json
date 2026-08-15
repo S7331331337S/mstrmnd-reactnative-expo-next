@@ -8,6 +8,7 @@
     "icon": "./assets/images/icon.png",
     "userInterfaceStyle": "dark",
     "backgroundColor": "#050506",
+    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
       "backgroundColor": "#050506"

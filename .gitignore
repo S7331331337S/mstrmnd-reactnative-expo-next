@@ -14,5 +14,9 @@ node_modules
 .next/
 .DS_Store
 
+# Next generated
+AGENTS.md
+CLAUDE.md
+
 # Archives
 *.zip

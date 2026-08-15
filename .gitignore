@@ -14,7 +14,7 @@ node_modules
 .next/
 .DS_Store
 
-# Next generated
+# AI agent files
 AGENTS.md
 CLAUDE.md
 

@@ -8,61 +8,26 @@ export default function TabsLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarShowLabel: false,
+        tabBarShowLabel: true,
+        tabBarLabelStyle: { fontSize: 9, marginTop: 2 },
         tabBarStyle: {
           position: "absolute",
           borderTopWidth: 0,
           backgroundColor: "transparent",
-          height: 78,
-          paddingTop: 12,
+          height: 82,
+          paddingTop: 10,
         },
         tabBarBackground: () => (
-          <BlurView
-            intensity={40}
-            tint="dark"
-            style={[StyleSheet.absoluteFill, { borderTopWidth: 1, borderTopColor: "#26272B" }]}
-          />
+          <BlurView intensity={48} tint="dark" style={[StyleSheet.absoluteFill, { borderTopWidth: 1, borderTopColor: "#242529" }]} />
         ),
-        tabBarActiveTintColor: "#F5F5F7",
-        tabBarInactiveTintColor: "#5C5D62",
+        tabBarActiveTintColor: "#F2F0E8",
+        tabBarInactiveTintColor: "#5F6167",
       }}
     >
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: "Home",
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "home" : "home-outline"} size={22} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="statistics"
-        options={{
-          title: "Statistics",
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "stats-chart" : "stats-chart-outline"} size={22} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="activity"
-        options={{
-          title: "Activity",
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "receipt" : "receipt-outline"} size={22} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="card"
-        options={{
-          title: "Card",
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "card" : "card-outline"} size={22} color={color} />
-          ),
-        }}
-      />
+      <Tabs.Screen name="index" options={{ title: "Command", tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? "sparkles" : "sparkles-outline"} size={21} color={color} /> }} />
+      <Tabs.Screen name="statistics" options={{ title: "Memory", tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? "layers" : "layers-outline"} size={21} color={color} /> }} />
+      <Tabs.Screen name="activity" options={{ title: "Activity", tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? "pulse" : "pulse-outline"} size={21} color={color} /> }} />
+      <Tabs.Screen name="card" options={{ title: "Identity", tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? "finger-print" : "finger-print-outline"} size={21} color={color} /> }} />
     </Tabs>
   );
 }
